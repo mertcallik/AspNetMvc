@@ -114,5 +114,15 @@ namespace AspNetMvcİntro.Controllers
 
             return Json(result);
         }
+
+        public ViewResult EmployeeForm()
+        {
+            return View();
+        }
+
+        public string RouteData(int id)
+        {
+            return id.ToString();
+        }
     }
 }
