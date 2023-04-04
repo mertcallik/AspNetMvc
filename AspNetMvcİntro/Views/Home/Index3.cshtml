@@ -1,0 +1,24 @@
+﻿@using AspNetMvcİntro
+@model AspNetMvcİntro.EmployeeListViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index3</title>
+</head>
+<body>
+@foreach (var item in Model.Employee)
+{
+    @item.FirtName
+    <br/>
+}
+
+
+</body>
+</html>
