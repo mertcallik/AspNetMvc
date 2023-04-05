@@ -1,5 +1,4 @@
-﻿@using AspNetMvcİntro
-@model AspNetMvcİntro.EmployeeListViewModel
+﻿@model AspNetMvcİntro.Models.EmployeeListViewModel
 
 @{
     Layout = null;
@@ -15,7 +14,7 @@
 <body>
 @foreach (var item in Model.Employee)
 {
-    @item.FirtName
+        @item.FirstName
     <br/>
 }
 

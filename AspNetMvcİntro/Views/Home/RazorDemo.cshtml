@@ -1,5 +1,4 @@
-﻿@using Microsoft.VisualStudio.Web.CodeGeneration.Contracts.Messaging
-@model AspNetMvcİntro.EmployeeListViewModel
+﻿@model AspNetMvcİntro.Models.EmployeeListViewModel;
 
 @{
     Layout = null;
@@ -51,7 +50,7 @@
             {
                 <tr>
                     <td>@item.Id</td>
-                    <td>@item.FirtName</td>
+                    <td>@item.FirstName</td>
                     <td>@item.LastName</td>
                     <td>@item.CityId</td>
                 </tr>
@@ -129,7 +128,7 @@
         <br />
         <b></b>
 
-        @Model.Employee[i].FirtName
+        @Model.Employee[i].FirstName
 
     }
     @{
@@ -143,7 +142,7 @@
     @while (counter < Model.Employee.Count)
     {
         <br />
-        <b>@Model.Employee[counter].FirtName;</b>
+        <b>@Model.Employee[counter].FirstName;</b>
 
 
         counter++;
@@ -160,7 +159,7 @@
 
         <br />
 
-        @Model.Employee[counter2].FirtName
+        @Model.Employee[counter2].FirstName
         ;
         counter2++;
     } while (counter2 < Model.Employee.Count);

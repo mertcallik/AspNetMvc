@@ -1,7 +1,7 @@
 ﻿using AspNetMvcİntro.Entities;
 using System.Collections.Generic;
 
-namespace AspNetMvcİntro
+namespace AspNetMvcİntro.Models
 {
     public class EmployeeListViewModel
     {

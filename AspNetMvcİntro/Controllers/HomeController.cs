@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using AspNetMvcİntro.Entities;
+using AspNetMvcİntro.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AspNetMvcİntro.Controllers
@@ -23,9 +24,9 @@ namespace AspNetMvcİntro.Controllers
         {
             List<Employee> employees = new List<Employee>
             {
-                new Employee { Id = 1, FirtName = "Mert", LastName = "Çalık", CityId = 34 },
-                new Employee { Id = 2, FirtName = "Rabişş", LastName = "Çalık", CityId = 34 },
-                new Employee { Id = 3, FirtName = "Mini", LastName = "Çalık", CityId = 34 }
+                new Employee { Id = 1, FirstName = "Mert", LastName = "Çalık", CityId = 34 },
+                new Employee { Id = 2, FirstName = "Rabişş", LastName = "Çalık", CityId = 34 },
+                new Employee { Id = 3, FirstName = "Mini", LastName = "Çalık", CityId = 34 }
             };
 
             List<string> cities = new List<string> { "İstanbul", "Ankara", "İzmir" };
@@ -69,9 +70,9 @@ namespace AspNetMvcİntro.Controllers
         {
             List<Employee> employees = new List<Employee>
             {
-                new Employee { Id = 1, FirtName = "Mert", LastName = "Çalık", CityId = 34 },
-                new Employee { Id = 2, FirtName = "Rabişş", LastName = "Çalık", CityId = 34 },
-                new Employee { Id = 3, FirtName = "Mini", LastName = "Çalık", CityId = 34 }
+                new Employee { Id = 1, FirstName = "Mert", LastName = "Çalık", CityId = 34 },
+                new Employee { Id = 2, FirstName = "Rabişş", LastName = "Çalık", CityId = 34 },
+                new Employee { Id = 3, FirstName = "Mini", LastName = "Çalık", CityId = 34 }
             };
 
             return Json(employees);
@@ -81,9 +82,9 @@ namespace AspNetMvcİntro.Controllers
         {
             List<Employee> employees = new List<Employee>
             {
-                new Employee { Id = 1, FirtName = "Mert", LastName = "Çalık", CityId = 34 },
-                new Employee { Id = 2, FirtName = "Rabişş", LastName = "Çalık", CityId = 34 },
-                new Employee { Id = 3, FirtName = "Mini", LastName = "Çalık", CityId = 34 }
+                new Employee { Id = 1, FirstName = "Mert", LastName = "Çalık", CityId = 34 },
+                new Employee { Id = 2, FirstName = "Rabişş", LastName = "Çalık", CityId = 34 },
+                new Employee { Id = 3, FirstName = "Mini", LastName = "Çalık", CityId = 34 }
             };
 
             List<string> cities = new List<string> { "İstanbul", "Ankara", "İzmir" };
@@ -101,16 +102,16 @@ namespace AspNetMvcİntro.Controllers
         {
             List<Employee> employees = new List<Employee>
             {
-                new Employee { Id = 1, FirtName = "Mert", LastName = "Çalık", CityId = 34 },
-                new Employee { Id = 2, FirtName = "Rabişş", LastName = "Çalık", CityId = 34 },
-                new Employee { Id = 3, FirtName = "Mini", LastName = "Çalık", CityId = 34 }
+                new Employee { Id = 1, FirstName = "Mert", LastName = "Çalık", CityId = 34 },
+                new Employee { Id = 2, FirstName = "Rabişş", LastName = "Çalık", CityId = 34 },
+                new Employee { Id = 3, FirstName = "Mini", LastName = "Çalık", CityId = 34 }
             };
             if (string.IsNullOrEmpty(key))
             {
                 return Json(employees);
             }
 
-            var result = employees.Where(e => e.FirtName.ToLower().Contains(key));
+            var result = employees.Where(e => e.FirstName.ToLower().Contains(key));
 
             return Json(result);
         }
