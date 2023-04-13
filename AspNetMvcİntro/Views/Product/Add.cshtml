@@ -1,0 +1,29 @@
+﻿@model AspNetMvcİntro.Models.ProductAddViewModel;
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Add";
+}
+
+
+
+<html>
+<head>
+</head>
+
+<body>
+    <form asp-action="Add" asp-controller="Product">
+
+        <label asp-for="Product.Id"></label><input asp-for="Product.Id" /><br />
+        <label asp-for="Product.FirstName"></label><input asp-for="Product.FirstName" /><br />
+        <label asp-for="Product.LastName"></label><input asp-for="Product.LastName" /><br />
+        <label asp-for="Product.Amount"></label><input asp-for="Product.Amount" /><br />
+        <select asp-for="Product.StoreId" asp-items="Model.Store"></select>
+        <button type="submit" >Add</button>
+
+
+    </form>
+
+
+</body>
+</html>
+

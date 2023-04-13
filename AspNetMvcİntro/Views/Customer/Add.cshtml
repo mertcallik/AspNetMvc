@@ -1,0 +1,25 @@
+﻿@model AspNetMvcİntro.Models.CustomerAddViewModel;
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!Doctype html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <form asp-controller="Customer" asp-action="Add">
+
+        <input asp-for="Customer.Id" />
+        <input asp-for="Customer.Name" />
+        <input asp-for="Customer.Email" />
+        <input asp-for="Customer.Phone" />
+        <button type="submit">Add</button>
+
+    </form>
+
+</body>
+
+</html>

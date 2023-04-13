@@ -1,0 +1,21 @@
+﻿@model AspNetMvcİntro.Models.CityAddViewModel
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Add";
+}
+<html>
+
+<head>
+
+</head>
+
+<body>
+<form asp-controller="City" asp-action="Add">
+    <b>City Id:</b><input asp-for="Cities.CityId"/><br/>
+    <b>City Name:</b><input asp-for="Cities.CityName"/><br/>
+    <button type="submit">Add</button>
+</form>
+
+</body>
+
+</html>
